@@ -1,6 +1,6 @@
 import { Button } from "../Button";
 import styles from "./styles.module.css";
-import backArrow from "../../../assets/back-arrow.svg";
+import backArrow from "../../../assets/images/back-arrow.svg";
 
 interface Props {
   parentMethod: () => void;
