@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+body {
+  font-size: 1.2rem;
+}
+
 button {
   outline: none;
   border: 0px;
@@ -24,11 +28,14 @@ button {
 
   font-family: "SFPro";
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 ::placeholder {
   font-family: "SFPro";
   font-weight: 400;
+  font-size: 0.9rem;
+  
   color: var(--color-purple);
   opacity: 50%;
 }
