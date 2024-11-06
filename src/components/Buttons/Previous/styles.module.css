@@ -1,0 +1,6 @@
+.previousButton {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-purple);
+  padding: 10px 12px;
+  border-radius: 20px;
+}
