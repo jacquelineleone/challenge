@@ -64,3 +64,38 @@
   height: calc(100% - 30px);
   object-fit: contain;
 }
+
+@media (min-width: 768px) {
+  .heroContainer {
+    margin-top: 0px;
+    width: 50vw;
+    height: 100%;
+  }
+
+  .steps {
+    top: 75px;
+    right: 40px;
+  
+    gap: 6px;
+  }
+
+  .logoImage {
+    display: none;
+  }
+
+  .imagesContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .guyImageContainer {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .guyImage {
+    height: auto;
+    width: 35vw;
+  }
+}
