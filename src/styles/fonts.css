@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "K2D";
+  src: url("../assets/fonts/K2D-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D";
+  src: url("../assets/fonts/K2D-LightItalic.woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "K2D";
+  src: url("../assets/fonts/K2D-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("../assets/fonts/SFProDisplay-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("../assets/fonts/SFProDisplay-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("../assets/fonts/SFProDisplay-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
