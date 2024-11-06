@@ -2,10 +2,18 @@ import { createContext, ReactNode, useContext, useState } from "react";
 
 interface FormData {
   name: string;
+  position: string;
+  goal: string;
+  companyCRM: string;
+  companyIndustry: string;
 }
 
 const defaultFormData: FormData = {
   name: "",
+  position: "",
+  goal: "",
+  companyCRM: "",
+  companyIndustry: "",
 };
 
 interface FormContextType {
