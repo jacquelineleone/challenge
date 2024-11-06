@@ -1,0 +1,66 @@
+.heroContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+  height: 25vh;
+  width: 98vw;
+  background: linear-gradient(-66.488deg, #231331 -40%, #00ccbc 100%);
+  border-radius: 200px 0 0 200px;
+}
+
+.steps {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 6px;
+
+  font-family: "SFPro";
+}
+
+.currentStep {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.totalSteps {
+  font-size: 0.7rem;
+}
+
+.line {
+  width: 1px;
+  height: 26px;
+  background-color: var(--color-purple);
+}
+
+.imagesContainer {
+  width: calc(100% - 65px);
+  max-width: 300px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoImage {
+  width: 100px;
+  height: auto;
+}
+
+.guyImageContainer {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.guyImage {
+  width: auto;
+  height: calc(100% - 30px);
+  object-fit: contain;
+}
