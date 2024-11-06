@@ -1,3 +1,3 @@
-export * from './Buttons/Button';
-export * from './Buttons/Next/NextButton';
-export * from './Buttons/Previous/PreviousButton';
+export * from "./Buttons";
+export * from "./Inputs";
+export * from "./ProgressBar/ProgressBar";
