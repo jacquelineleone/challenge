@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
 
 interface Props {
-  children: ReactNode;
+  className?: string;
   parentMethod: () => void;
+  children: ReactNode;
 }
 
-export const Button = ({ children, parentMethod }: Props) => {
+export const Button = ({ className = "", parentMethod, children }: Props) => {
   return (
-    <button type="button" onClick={parentMethod}>
+    <button type="button" className={className} onClick={parentMethod}>
       {children}
     </button>
   );
