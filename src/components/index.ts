@@ -1,4 +1,4 @@
 export * from './Buttons';
-export * from './Hero/Hero';
+export * from './FormNavigation/FormNavigation';
 export * from './Inputs';
 export * from './ProgressBar/ProgressBar';

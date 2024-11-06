@@ -3,11 +3,11 @@ import logo from "../../assets/images/logo.svg";
 import guy from "../../assets/images/smiling-guy.svg";
 import { useFormContext } from "../../context";
 
-export const Hero = () => {
+export const FormNavigation = () => {
   const { currentStep, totalSteps } = useFormContext();
 
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.container}>
       <div className={styles.steps}>
         <p className={styles.currentStep}>0{currentStep + 1}</p>
         <div className={styles.line}></div>
