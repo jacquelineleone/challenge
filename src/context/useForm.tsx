@@ -18,6 +18,7 @@ const defaultFormData: FormData = {
 
 interface FormContextType {
   currentStep: number;
+  totalSteps: number;
   nextStep: () => void;
   previousStep: () => void;
   formData: FormData;
@@ -65,6 +66,7 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
     <FormContext.Provider
       value={{
         currentStep,
+        totalSteps: totalSteps,
         nextStep,
         previousStep,
         formData,
