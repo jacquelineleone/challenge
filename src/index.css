@@ -3,6 +3,11 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-aqua: #00ccbc;
+  --color-purple: #231331;
 }
 
 * {
