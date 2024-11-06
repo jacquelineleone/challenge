@@ -1,5 +1,8 @@
 .barContainer {
   position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
   background-color: transparent;
   width: 100%;
   height: 4px;
