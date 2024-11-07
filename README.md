@@ -9,7 +9,7 @@ El proyecto consiste en la implementación de un formulario multistep, basado en
 - Lenguaje: TypeScript
 - Framework: React
 - Herramienta de desarrollo: Vite
-- Estilos: CSS (estructura de módulos)
+- Estilos: CSS (estructura de módulos) y GSAP para animaciones complejas
 
 <br />
 
