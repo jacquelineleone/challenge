@@ -29,7 +29,11 @@
 }
 
 .small {
-  width: 148px;
+  width: 47.5%;
+}
+
+.small:last-child {
+  width: 100%;
 }
 
 .large {
@@ -45,7 +49,12 @@
   .inputRadio label {
     padding: 0 40px;
   }
+
   .small {
+    width: 125.65px;
+  }
+
+  .small:last-child {
     width: 125.65px;
   }
 
