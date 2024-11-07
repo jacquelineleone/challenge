@@ -8,7 +8,6 @@ export const NavigationButtons = () => {
 
   const getNextButtonText = () => {
     if (currentStep === 0) return "Comenzar";
-    if (currentStep === totalSteps - 1) return "Finalizar";
     return "Siguiente";
   };
 
