@@ -1,0 +1,55 @@
+.inputRadio {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+  border: 1px solid var(--color-purple);
+  border-radius: 30px;
+
+  font-family: "SFPro";
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.inputRadio label {
+  padding: 0px 20px;
+}
+
+.inputRadio input {
+  position: absolute;
+  z-index: 10;
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.small {
+  width: 148px;
+}
+
+.large {
+  width: 100%;
+}
+
+.active {
+  background-color: var(--color-purple);
+  color: var(--color-light);
+}
+
+@media (min-width: 768px) {
+  .inputRadio label {
+    padding: 0 40px;
+  }
+  .small {
+    width: 125.65px;
+  }
+
+  .large {
+    width: 180px;
+  }
+}

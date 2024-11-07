@@ -1,11 +1,47 @@
+@import "./styles/fonts.css";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "K2D";
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-aqua: #00ccbc;
+  --color-purple: #231331;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+button {
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+
+  font-family: "SFPro";
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+::placeholder {
+  font-family: "SFPro";
+  font-weight: 400;
+  font-size: 0.7rem;
+
+  color: var(--color-purple);
+  opacity: 50%;
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
 }

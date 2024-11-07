@@ -1,0 +1,13 @@
+.inputText {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.inputText input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--color-purple);
+  opacity: 50%;
+  padding: 0px 0px 7px 0px;
+}
