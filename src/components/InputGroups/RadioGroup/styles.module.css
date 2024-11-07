@@ -1,0 +1,29 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.inputChild {
+  position: absolute;
+  left: 5px;
+
+  padding: 8px 19px;
+  border-radius: 20px;
+
+  background-color: var(--color-aqua);
+  color: var(--color-light);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .inputChild {
+    padding: 8px 11px;
+  }
+}
