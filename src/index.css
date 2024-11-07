@@ -28,14 +28,20 @@ button {
 
   font-family: "SFPro";
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 ::placeholder {
   font-family: "SFPro";
   font-weight: 400;
-  font-size: 0.9rem;
-  
+  font-size: 0.7rem;
+
   color: var(--color-purple);
   opacity: 50%;
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
 }
