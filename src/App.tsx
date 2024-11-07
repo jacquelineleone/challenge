@@ -1,7 +1,11 @@
-import "./App.css";
+import FormPage from "./pages/Form";
 
 function App() {
-  return <div></div>;
+  return (
+    <main className="main">
+      <FormPage />
+    </main>
+  );
 }
 
 export default App;
