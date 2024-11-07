@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useState,
+  useCallback,
+} from "react";
 
 interface FormData {
   name: string;
@@ -22,6 +28,7 @@ interface FormContextType {
   nextStep: () => void;
   previousStep: () => void;
   formData: FormData;
+  errors: Record<string, string>;
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
@@ -48,9 +55,33 @@ export const useFormContext = () => {
 export const FormProvider = ({ children, totalSteps }: FormProps) => {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [formData, setFormData] = useState<FormData>(defaultFormData);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const nextStep = () =>
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, totalSteps - 1));
+  const validateStep = useCallback(() => {
+    const newErrors: Record<string, string> = {};
+
+    if (currentStep === 0 && !formData.name)
+      newErrors.name = "El nombre es requerido";
+    if (currentStep === 1 && !formData.position)
+      newErrors.position = "La posición es requerida";
+
+    if (currentStep === 2 && !formData.goal)
+      newErrors.goal = "El objetivo es requerido";
+    if (currentStep === 3 && !formData.companyCRM)
+      newErrors.companyCRM = "El CRM de la empresa es requerido";
+    if (currentStep === 4 && !formData.companyIndustry)
+      newErrors.companyIndustry = "La industria de la empresa es requerida";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  }, [formData, currentStep]);
+
+  const nextStep = () => {
+    if (validateStep()) {
+      setCurrentStep((prevStep) => Math.min(prevStep + 1, totalSteps - 1));
+    }
+  };
 
   const previousStep = () =>
     setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
@@ -70,6 +101,7 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
         nextStep,
         previousStep,
         formData,
+        errors,
         handleChange,
         setFormData,
       }}
