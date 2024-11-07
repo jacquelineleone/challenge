@@ -5,15 +5,18 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-  width: 125.65px;
 
   border: 1px solid var(--color-purple);
   border-radius: 30px;
 
   font-family: "SFPro";
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-align: center;
+}
+
+.inputRadio label {
+  padding: 0px 20px;
 }
 
 .inputRadio input {
@@ -25,7 +28,25 @@
   cursor: pointer;
 }
 
+.small {
+  width: 148px;
+}
+
+.large {
+  width: 100%;
+}
+
 .active {
   background-color: var(--color-purple);
   color: var(--color-light);
+}
+
+@media (min-width: 768px) {
+  .small {
+    width: 125.65px;
+  }
+
+  .large {
+    width: 180px;
+  }
 }
