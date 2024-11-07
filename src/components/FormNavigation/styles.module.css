@@ -1,10 +1,17 @@
 .container {
+  margin-top: 40px;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigationContainer {
   position: relative;
   display: flex;
   justify-content: center;
 
-  margin-top: 40px;
-  height: 25vh;
+  height: 100%;
   width: 98vw;
   background: linear-gradient(-66.488deg, #231331 -40%, #00ccbc 100%);
   border-radius: 200px 0 0 200px;
@@ -68,14 +75,17 @@
 @media (min-width: 768px) {
   .container {
     margin-top: 0px;
-    width: 50vw;
     height: 100%;
+  }
+
+  .navigationContainer {
+    width: 50vw;
   }
 
   .steps {
     top: 75px;
     right: 40px;
-  
+
     gap: 6px;
   }
 
