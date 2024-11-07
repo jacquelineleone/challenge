@@ -32,7 +32,7 @@ interface FormContextType {
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
-  setFormData: (data: FormData) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 interface FormProps {
@@ -93,6 +93,13 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (validateStep()) {
+      window.location.href = "https://www.customerscoops.com/";
+    }
+  };
+
   return (
     <FormContext.Provider
       value={{
@@ -103,7 +110,7 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
         formData,
         errors,
         handleChange,
-        setFormData,
+        handleSubmit,
       }}
     >
       {children}
