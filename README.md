@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Test FE Developer | Customer Scoops
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+El proyecto consiste en la implementación de un formulario multistep, basado en un diseño proporcionado en Figma. Se desarrollaron funcionalidades como la navegación entre los pasos del formulario, validación de campos, gestión de estados, entre otras.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- Lenguaje: TypeScript
+- Framework: React
+- Herramienta de desarrollo: Vite
+- Estilos: CSS (estructura de módulos)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<br />
 
-- Configure the top-level `parserOptions` property like this:
+## Instrucciones para ejecutar el proyecto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 1. Clonar el repositorio: 
+Utilizando el siguiente comando, cloná el repositorio en local.
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+  git clone https://github.com/jacquelineleone/challenge.git
 ```
+
+### 2. Instalar las dependencias: 
+Accedé a la ubicación del archivo clonado, e instalá las dependencias utilizando npm:
+
+```js
+  npm install
+```
+
+### 3. Ejecutar el proyecto: 
+Para iniciar el servidor en desarrollo, utilizá el siguiente comando:
+
+```js
+  npm run dev
+```
+
+Esto iniciará la aplicación en http://localhost:3000
+
+### 4. Despliegue: 
+El proyecto se encuentra desplegado en Vercel. Podés acceder a la aplicación en el [siguiente enlace](https://challenge-murex.vercel.app/)
+
+<br />
+
+## Estructura del proyecto
+
+- **src/components**: Contiene los componentes reutilizables.
+- **src/context**: Definición del contexto que maneja el formulario.
+- **src/pages**: Contiene las vistas de la aplicación (en este caso, solo Form ya que el diseño implicaba el desarrollo de una sola vista).
+- **src/styles**: Archivos de estilos globales.
+
+<br />
+
+## Notas sobre el proyecto
+
+- La aplicación ha sido diseñada con un enfoque **mobile-first**, asegurando que la interfaz sea completamente **responsive** y priorizando la experiencia del usuario en dispositivos móviles. Esto implica que los estilos CSS iniciales están orientados a pantallas pequeñas, y mediante media queries, se ajustan para pantallas más grandes.
+- Se priorizó la creación de un proyecto limpio y modular, bajo el principio de responsabilidad única (**Single Responsability Principle**). Esto significa que cada componente está diseñado para cumplir con una única función o responsabilidad, facilitando así el mantenimiento y la reutilización de cada parte del proyecto.
