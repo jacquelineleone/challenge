@@ -3,7 +3,7 @@ import {
   ReactNode,
   useContext,
   useState,
-  useCallback,
+  useEffect,
 } from "react";
 
 interface FormData {
@@ -57,7 +57,7 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
   const [formData, setFormData] = useState<FormData>(defaultFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const validateStep = useCallback(() => {
+  const validateStep = () => {
     const newErrors: Record<string, string> = {};
 
     if (currentStep === 0 && !formData.name)
@@ -75,6 +75,10 @@ export const FormProvider = ({ children, totalSteps }: FormProps) => {
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
+  };
+
+  useEffect(() => {
+    validateStep();
   }, [formData, currentStep]);
 
   const nextStep = () => {

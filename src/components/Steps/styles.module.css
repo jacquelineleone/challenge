@@ -23,3 +23,9 @@
 .finalStep p {
   font-style: italic;
 }
+
+@media (min-width: 768px) {
+  .finalStep {
+    width: 215px;
+  }
+}
