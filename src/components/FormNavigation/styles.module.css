@@ -29,10 +29,17 @@
   font-family: "SFPro";
 }
 
+.mask {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+
 .currentStep {
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 15px;
+  display: flex;
 }
 
 .totalSteps {
